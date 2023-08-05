@@ -1,0 +1,85 @@
+.Main-container {
+    background-color: #222;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+padding: 0;
+}
+.input-Sign-in-container{
+    display: flex;
+    flex-direction: row;
+}
+.Sign-in-container {
+    background-color: #333;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 90%;
+}
+span {
+    padding-top: 10px;
+}
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #444;
+    margin-bottom: 20px;
+}
+
+.icon {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+input {
+    border: none;
+    background: none;
+    outline: none;
+    color: #fff;
+    width: 100%;
+    padding: 10px 5px;
+}
+
+.Sign-in-button {
+    margin-top: 20px;
+    background-color:  #ff4444;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.Sign-in-button:hover {
+    background-color: #00ff00;
+}
+
+input::placeholder {
+    color: #888;
+}
+
+/* Dark theme for icons */
+.fas {
+    color: #888;
+}
+
+/* Custom input validation styles */
+input:invalid {
+    border-bottom: 2px solid #ff4444;
+}
+
+input:valid {
+    border-bottom: 2px solid #00ff00;
+}
