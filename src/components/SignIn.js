@@ -5,6 +5,7 @@ export default function SignIn() {
     const [formData, setFormData] = useState({
       username: '',
       email: '',
+      age:'',
       password: '',
       confirmPassword: '',
     });
@@ -13,6 +14,7 @@ export default function SignIn() {
     const [confirmPasswordVisible, setConfirmPasswordVisible] = useState(false);
   
     const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^a-zA-Z\d]).{8,20}$/;
+    const agePattern = /^(?=.*[0-9])(?=.*[0-9]).{2}$/;
   
     const handleInputChange = (e) => {
       const { id, value } = e.target;
@@ -35,7 +37,13 @@ export default function SignIn() {
         alert(
           'Password must contain at least one uppercase letter, one lowercase letter, one digit, and be 8 to 20 characters long.'
         );
-      } else {
+      }
+      else if (!agePattern.test(formData.age)) {
+        alert(
+          'Age contain only 2 digit Number.'
+        );
+      }
+       else {
         alert('Sign up successful!');
       }
     };
@@ -68,6 +76,18 @@ export default function SignIn() {
                 onChange={handleInputChange}
               />
             </div>
+            <div className="input-Sign-in-container">
+               <input
+                type="text"
+                id="age"
+                placeholder="Age in Years (21)"
+                required
+                value={formData.age}
+                onChange={handleInputChange}
+              />
+              {/* <i className="icon fas fa-user"> </i> */}
+            </div>
+
             <div className="input-Sign-in-container">
               {/* <i className="icon fas fa-lock"></i> */}
               <input
